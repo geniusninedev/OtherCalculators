@@ -1,0 +1,224 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainscreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#CFD8DC"
+    android:weightSum="1">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:weightSum="1"
+                android:layout_weight="0.09">
+
+                <TextView
+                    android:layout_width="207dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:textSize="15dp"
+                    android:text="Calculate Area For: "
+                    android:textColor="#000000"
+                    android:id="@+id/textViewArea"
+                    android:layout_weight="0.14" />
+
+                <Spinner
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/spinnerArea"
+                    android:layout_weight="0.57" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Length(cm)"
+                    android:layout_weight="1"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:visibility="invisible"
+                    android:id="@+id/textViewLength"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:text="base(cm)"
+                    android:layout_weight="1"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:visibility="gone"
+                    android:id="@+id/textViewbase"
+                    android:textSize="15dp" />
+
+
+                <EditText
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:text="  "
+                    android:layout_weight="1"
+                    android:visibility="invisible"
+                    android:background="@android:drawable/editbox_background"
+
+                    android:id="@+id/editTextLength" />
+
+            </LinearLayout>
+
+            <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:layout_marginLeft="10dp"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Width(cm)"
+            android:layout_width="120dp"
+            android:textColor="#000000"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewWidth"
+            android:textSize="15dp" />
+
+                <TextView
+                    android:text="Height(cm)"
+                    android:layout_width="120dp"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewheight"
+                    android:textSize="15dp" />
+
+
+        <EditText
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:text="  "
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:background="@android:drawable/editbox_background"
+
+            android:id="@+id/editTextWidth" />
+
+    </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Radius(cm):"
+                    android:layout_width="120dp"
+                    android:textColor="#000000"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/textViewRadius"
+                    android:visibility="invisible"
+                    android:textSize="15dp"
+                   />
+
+                <EditText
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:background="@android:drawable/editbox_background"
+                    android:text="  "
+                    android:visibility="invisible"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:id="@+id/editTextRadius"
+                   />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginTop="30dp">
+
+
+        <Button
+            android:text="Calculate"
+        android:layout_marginLeft="10dp"
+            android:background="#607D8B"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonCalculate"
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Clear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#607D8B"
+            android:id="@+id/buttonClear"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            android:layout_weight="1" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginLeft="10dp"
+
+            android:layout_weight="0.09">
+
+    <TextView
+        android:text="Square Footage Value="
+        android:layout_width="165dp"
+        android:layout_marginTop="30dp"
+        android:textColor="#000000"
+        android:layout_height="wrap_content"
+        android:textSize="15dp" />
+
+            <TextView
+                android:text=""
+                android:background="@android:drawable/editbox_background"
+                android:layout_width="match_parent"
+                android:layout_marginTop="30dp"
+                android:textColor="#000000"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewSquareFootageValue"
+                android:textSize="18dp" />
+
+
+
+            </LinearLayout>
+</LinearLayout>
+</ScrollView>
+</LinearLayout>

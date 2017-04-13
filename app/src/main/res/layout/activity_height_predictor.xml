@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nineinfosys.android.otherscalculators.heightpredictor.Heightpredictorcalculator"
+    android:background="#CFD8DC"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="6">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                >
+                <TextView
+                    android:text=" Select Unit"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:textSize="15dp"/>
+
+                <Spinner
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/unitspinner" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="50dp">
+
+                <TextView
+                    android:text="Child Height"
+
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:layout_weight="1"
+                    android:id="@+id/editTextchildHeight"
+                    android:background="@android:drawable/editbox_background"
+                    android:hint="" />
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:id="@+id/childSpinner" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:layout_marginTop="20dp">
+
+
+
+                <TextView
+                    android:text="Child Age"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight="1"
+                    android:id="@+id/editTextchildAge"
+                    android:hint="" />
+
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="yrs"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:id="@+id/distSpinner" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:layout_marginTop="20dp">
+
+
+
+                <TextView
+                    android:text="Mother Height"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/editbox_background"
+                    android:id="@+id/editTextmotherheight"
+                    />
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:id="@+id/motherSpinner" />
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:layout_marginTop="20dp">
+
+
+
+                <TextView
+                    android:text="Father Height"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/editbox_background"
+                    android:id="@+id/editTextfatherheight"
+                    />
+
+
+                <TextView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:id="@+id/fatherSpinner" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_weight="1"
+                android:weightSum="2">
+
+                <Button
+                    android:text="CalCulate Height"
+                    android:background="#607D8B"
+                    android:layout_width="147dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnCalculateHeight" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp">
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp">
+
+                    <TableRow
+                        android:background="#607D8B"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:weightSum="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_marginRight="12dp"
+                            android:textColor="#FFFFFF"
+                            android:text="Gender" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:paddingLeft="53dp"
+                            android:layout_marginRight="5dp"
+                            android:textColor="#FFFFFF"
+                            android:text="In cm" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:paddingRight="35dp"
+                            android:layout_marginLeft="15dp"
+                            android:textColor="#FFFFFF"
+                            android:text="In ft" />
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#CFD8DC"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#000000"
+                            android:text="Male" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/malecmValue"
+                            android:textColor="#000000"
+                            android:gravity="right"
+                            android:layout_weight="1"
+                            android:text="" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/cmValue"
+                            android:textColor="#000000"
+                            android:gravity="left"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="cm" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:id="@+id/malefeetValue"
+                            android:textColor="#000000"
+                            android:layout_weight="1"
+                            android:text="" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/ftValue"
+                            android:textColor="#000000"
+                            android:gravity="left"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:text="ft" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:background="#CFD8DC"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="#000000"
+                            android:text="Female" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:id="@+id/femalecmValue"
+                            android:textColor="#000000"
+                            android:layout_weight="1"
+                            android:text="" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/femaleCmmValue"
+                            android:textColor="#000000"
+                            android:gravity="left"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="cm" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:textColor="#000000"
+                            android:id="@+id/femalefeetValue"
+                            android:layout_weight="1"
+                            android:text="" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/femalefetValue"
+                            android:textColor="#000000"
+                            android:gravity="left"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="10dp"
+                            android:text="ft" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

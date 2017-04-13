@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nineinfosys.android.otherscalculators.tilescalculator.tilescalci"
+    android:background="#CFD8DC"
+
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="30dp"
+                >
+
+                <TextView
+                    android:text="Area Length"
+
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/editTextLength"
+                    android:background="@android:drawable/editbox_background"
+                    />
+
+                <TextView
+                    android:text="ft."
+                    android:gravity="center"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:textSize="15dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:layout_marginTop="20dp">
+
+
+
+                <TextView
+                    android:text="Area Width"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/editTextWidth"
+                    />
+
+                <TextView
+                    android:text="ft."
+                    android:gravity="center"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:textSize="15dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:layout_marginTop="20dp">
+
+
+
+                <TextView
+                    android:text="Select Tile Size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="15dp"/>
+
+                <Spinner
+                    android:layout_width="120dp"
+                    android:layout_marginLeft="120dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/tilesize" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_weight="1"
+                android:weightSum="2">
+
+                <Button
+                    android:text="CalCulate Area"
+                    android:background="#90A4AE"
+
+                    android:layout_width="147dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnCalculatearea" />
+
+                <TextView
+                    android:layout_marginTop="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/textViewResult"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

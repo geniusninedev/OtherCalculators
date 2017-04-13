@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_body_surface_area_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:background="#CFD8DC"
+
+    tools:context=".squarefootage.BodySurfaceArea">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+
+        >
+
+        <TextView
+            android:text="Body Weight"
+
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:layout_weight="1"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/editTextWeight"
+            android:background="@android:drawable/editbox_background"
+            android:hint="kg" />
+
+        <Spinner
+            android:layout_width="32dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/weightSpinner" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+
+        >
+
+        <TextView
+            android:text="Height"
+
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:layout_weight="1"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/editTextHeight"
+            android:background="@android:drawable/editbox_background"
+            android:hint="cm" />
+
+        <Spinner
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:id="@+id/HeightSpinner" />
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:text="Calculate"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/CalculateBodySurfceArea"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp"
+            android:layout_below="@+id/editTextWeight"
+            android:layout_alignRight="@+id/editTextWeight"
+            android:layout_alignEnd="@+id/editTextWeight"
+
+            android:layout_weight="1" />
+
+        <Button
+            android:text="Clear"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:id="@+id/buttonClear"
+            android:layout_alignBaseline="@+id/CalculateBodySurfceArea"
+            android:layout_alignBottom="@+id/CalculateBodySurfceArea"
+            android:layout_toRightOf="@+id/CalculateBodySurfceArea"
+            android:layout_toEndOf="@+id/CalculateBodySurfceArea"
+
+
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+
+        android:orientation="vertical">
+        <TextView
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:id="@+id/textViewResult"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:background="@android:drawable/editbox_background"
+
+            android:gravity="center" />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
+    </LinearLayout>

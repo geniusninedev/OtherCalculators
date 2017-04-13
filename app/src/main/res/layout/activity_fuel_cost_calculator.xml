@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nineinfosys.android.otherscalculators.fuelcostcalculator.FuelCostCalculator"
+    android:background="#CFD8DC"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="50dp"
+                >
+
+                <TextView
+                    android:text="Trip Distance"
+
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:layout_weight="1"
+                    android:id="@+id/editTexttripdistance"
+                    android:background="@android:drawable/editbox_background"
+                    android:hint="miles" />
+
+                <Spinner
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/tripSpinner" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:layout_marginTop="20dp">
+
+
+
+                <TextView
+                    android:text="Fuel Efficiency"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:background="@android:drawable/editbox_background"
+                    android:layout_weight="1"
+                    android:id="@+id/editTextfuelefficiency"
+                    android:hint="miles/gallon" />
+
+
+                <Spinner
+                    android:layout_width="32dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/fuelSpinner" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:weightSum="3"
+                android:layout_marginTop="20dp">
+
+
+
+                <TextView
+                    android:text="Fuel Price"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_weight="1"
+                    android:textSize="15dp"/>
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/editbox_background"
+                    android:id="@+id/editTextgasPrice"
+                    android:hint="/gallon" />
+
+
+                <Spinner
+                    android:layout_width="32dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/priceSpinner" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_weight="1"
+                android:weightSum="2">
+
+                <Button
+                    android:text="CalCulate Cost"
+                    android:background="#90A4AE"
+
+                    android:layout_width="147dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnCalculatecost" />
+
+                <TextView
+                    android:layout_marginTop="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:layout_weight="1"
+
+                    android:gravity="center"
+                    android:id="@+id/textViewResult"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

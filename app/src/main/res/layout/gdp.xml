@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#CFD8DC"
+
+    tools:context=".squarefootage.GDP">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+           >
+
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Personal Consumption:"
+            android:textColor="#000000"
+            android:layout_width="224dp"
+
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewPersonalConsumption"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:text="  "
+            android:background="@android:drawable/editbox_background"
+            android:id="@+id/editTextPersonalConsumption" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:weightSum="2"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Gross Investment:"
+            android:layout_width="224dp"
+            android:textColor="#000000"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewGrossInvestment"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:text="  "
+            android:background="@android:drawable/editbox_background"
+            android:id="@+id/editTextGrossInvestment" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:weightSum="2"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Government Consumption:"
+            android:textColor="#000000"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewGovernmentConsumption"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:background="@android:drawable/editbox_background"
+            android:text="  "
+            android:id="@+id/editTextGovernmentConsumption" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Export:"
+            android:textColor="#000000"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewExport"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:text="  "
+            android:background="@android:drawable/editbox_background"
+
+            android:id="@+id/editTextExport" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Import:"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewImport"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:text="  "
+            android:background="@android:drawable/editbox_background"
+
+
+            android:id="@+id/editTextImport" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+      >
+
+
+        <Button
+            android:text="Calculate"
+            android:background="#90A4AE"
+             android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonCalculate"
+          />
+
+        <Button
+            android:text="Clear"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="#90A4AE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonClear"
+
+            />
+    </LinearLayout>
+
+    <TextView
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:layout_width="360dp"
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewResult" />
+
+
+</LinearLayout>
+</ScrollView>
+    </LinearLayout>

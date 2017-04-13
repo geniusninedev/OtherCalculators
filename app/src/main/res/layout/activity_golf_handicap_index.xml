@@ -1,0 +1,481 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.nineinfosys.android.otherscalculators.golfhandicapindex.golfHandicapIndex"
+    android:background="#CFD8DC"
+    android:weightSum="1">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:text="Round"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_weight="0.05"
+                    android:textSize="15dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:text="Score"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_weight="0.05"
+                    android:textSize="15dp"
+                    android:gravity="center" />
+
+
+                <TextView
+                    android:text="Course-Rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_weight="0.05"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:text="Slope-Rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_weight="0.05"
+                    android:textSize="15dp"/>
+
+                <TextView
+                    android:text="Diffrential"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:layout_weight="0.05"
+                    android:textSize="15dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Round #1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:textSize="15dp"
+                        android:id="@+id/course"
+                        />
+
+                    <EditText
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:inputType="numberDecimal"
+
+                        android:textSize="15dp"
+                        android:background="@android:drawable/editbox_background"
+                        android:id="@+id/score1"
+                        android:hint="0"
+                        android:gravity="center_vertical|center_horizontal" />
+
+
+                    <EditText
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:background="@android:drawable/editbox_background"
+                        android:layout_weight="0.05"
+                        android:id="@+id/courseRating1"
+                        android:textSize="15dp"
+                        android:inputType="numberDecimal"
+
+                        android:hint="0"
+                        android:gravity="center" />
+
+                    <EditText
+                        android:text=""
+                        android:background="@android:drawable/editbox_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:inputType="numberDecimal"
+
+                        android:id="@+id/slopeRating1"
+                        android:textSize="15dp"
+                        android:hint="0"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:text=""
+                        android:background="@android:drawable/editbox_background"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:id="@+id/diff1"
+
+                        android:textSize="15dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Round #2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:textSize="15dp"
+                        android:id="@+id/coursesecond"
+                        />
+
+                    <EditText
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:background="@android:drawable/editbox_background"
+                        android:layout_weight="0.05"
+                        android:textSize="15dp"
+                        android:inputType="numberDecimal"
+
+                        android:id="@+id/score2"
+                        android:hint="0"
+                        android:gravity="center_vertical|center" />
+
+
+                    <EditText
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:background="@android:drawable/editbox_background"
+                        android:layout_weight="0.05"
+                        android:id="@+id/courseRating2"
+                        android:textSize="15dp"
+                        android:inputType="numberDecimal"
+
+                        android:hint="0"
+                        android:gravity="center_vertical|center" />
+
+                    <EditText
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:inputType="numberDecimal"
+
+                        android:background="@android:drawable/editbox_background"
+                        android:id="@+id/slopeRating2"
+                        android:textSize="15dp"
+                        android:hint="0"
+                        android:gravity="center" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:background="@android:drawable/editbox_background"
+                        android:id="@+id/diff2"
+
+                        android:textSize="15dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Round #3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:textSize="15dp"
+                        android:id="@+id/coursethird"
+                        />
+
+                    <EditText
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:inputType="numberDecimal"
+
+                        android:layout_weight="0.05"
+                        android:textSize="15dp"
+                        android:background="@android:drawable/editbox_background"
+                        android:id="@+id/score3"
+                        android:hint="0"
+                        android:gravity="center_vertical|center" />
+
+
+                    <EditText
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:inputType="numberDecimal"
+
+                        android:id="@+id/courseRating3"
+                        android:background="@android:drawable/editbox_background"
+                        android:textSize="15dp"
+                        android:hint="0"
+                        android:gravity="center_vertical|center" />
+                    <EditText
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:inputType="numberDecimal"
+
+                        android:layout_weight="0.05"
+                        android:background="@android:drawable/editbox_background"
+                        android:id="@+id/slopeRating3"
+                        android:textSize="15dp"
+                        android:hint="0"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:id="@+id/diff3"
+                        android:background="@android:drawable/editbox_background"
+                        android:textSize="15dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Round #4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:textSize="15dp"
+                        android:id="@+id/coursefourth"
+                        android:hint="4" />
+
+                    <EditText
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:textSize="15dp"
+                        android:inputType="numberDecimal"
+
+                        android:background="@android:drawable/editbox_background"
+                        android:id="@+id/score4"
+                        android:hint="0"
+                        android:gravity="center_vertical|center" />
+
+
+                    <EditText
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:inputType="numberDecimal"
+
+                        android:background="@android:drawable/editbox_background"
+                        android:id="@+id/courseRating4"
+                        android:textSize="15dp"
+                        android:hint="0"
+                        android:gravity="center_vertical|center" />
+
+                    <EditText
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:id="@+id/slopeRating4"
+                        android:textSize="15dp"
+                        android:inputType="numberDecimal"
+
+                        android:background="@android:drawable/editbox_background"
+                        android:hint="0"
+                        android:gravity="center" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:id="@+id/diff4"
+                        android:background="@android:drawable/editbox_background"
+                        android:textSize="15dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Round #5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:textSize="15dp"
+                        android:id="@+id/coursefifth"
+                        android:hint="5" />
+
+                    <EditText
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:inputType="numberDecimal"
+
+                        android:textSize="15dp"
+                        android:background="@android:drawable/editbox_background"
+                        android:id="@+id/score5"
+                        android:hint="0"
+                        android:gravity="center_vertical|center" />
+
+
+                    <EditText
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:id="@+id/courseRating5"
+                        android:inputType="numberDecimal"
+
+                        android:background="@android:drawable/editbox_background"
+                        android:textSize="15dp"
+                        android:hint="0"
+                        android:gravity="center_vertical|center" />
+
+                    <EditText
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:inputType="numberDecimal"
+
+                        android:id="@+id/slopeRating5"
+                        android:background="@android:drawable/editbox_background"
+                        android:textSize="15dp"
+                        android:hint="0"
+                        android:gravity="center" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:layout_weight="0.05"
+                        android:id="@+id/diff5"
+                        android:background="@android:drawable/editbox_background"
+                        android:textSize="15dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <Button
+                android:text="Calculate"
+                android:background="#90A4AE"
+                android:layout_marginTop="20dp"
+                android:layout_width="183dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:id="@+id/calculate" />
+
+
+            <TextView
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:background="@android:drawable/editbox_background"
+                android:id="@+id/sumOfdiffrential"
+                android:textSize="15dp"
+                android:layout_weight="0.31" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
