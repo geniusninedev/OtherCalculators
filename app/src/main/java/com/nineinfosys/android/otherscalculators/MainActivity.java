@@ -39,6 +39,7 @@ import com.microsoft.windowsazure.mobileservices.MobileServiceClient;
 import com.microsoft.windowsazure.mobileservices.http.OkHttpClientFactory;
 import com.microsoft.windowsazure.mobileservices.table.MobileServiceTable;
 import com.nineinfosys.android.otherscalculators.DashBord.GetApp;
+import com.nineinfosys.android.otherscalculators.Forum.ForumActivity;
 import com.nineinfosys.android.otherscalculators.Login.Contacts;
 import com.nineinfosys.android.otherscalculators.Login.Login;
 import com.nineinfosys.android.otherscalculators.fuelcostcalculator.FuelCostCalculator;
@@ -106,8 +107,7 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+              startActivity(new Intent(MainActivity.this,ForumActivity.class));
             }
         });
 
