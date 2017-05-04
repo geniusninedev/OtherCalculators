@@ -13,9 +13,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.android.otherscalculators.MainActivity;
 import com.nineinfosys.android.otherscalculators.R;
 import com.nineinfosys.android.otherscalculators.gradepointer.Grade;
+import com.nineinfosys.android.otherscalculators.gradepointer.averagePointer;
 import com.nineinfosys.android.otherscalculators.squarefootage.BodySurfaceArea;
 
 /**
@@ -35,6 +39,10 @@ public class Voltagedrop extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.voltagedrop);
+        MobileAds.initialize(Voltagedrop.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView)this.findViewById(R.id.adViewvoltage);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         currentTextView=(TextView)findViewById(R.id.textViewCurrent);
         resistanceTextView=(TextView)findViewById(R.id.textViewResistance);
         distanceTextView=(TextView)findViewById(R.id.textViewDistance);

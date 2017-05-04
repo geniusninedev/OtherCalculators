@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center|top"
     android:orientation="vertical"
     android:background="#CFD8DC"
-    android:padding="5dp" >
+    android:padding="5dp">
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adViewtimezone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
 
+    </com.google.android.gms.ads.AdView>
     <LinearLayout
         android:layout_marginTop="50dp"
         android:layout_marginBottom="20dp"

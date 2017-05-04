@@ -13,8 +13,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.android.otherscalculators.MainActivity;
 import com.nineinfosys.android.otherscalculators.R;
+import com.nineinfosys.android.otherscalculators.fuelcostcalculator.FuelCostCalculator;
 import com.nineinfosys.android.otherscalculators.lovecalculator.LoveCalculator;
 import com.nineinfosys.android.otherscalculators.ohmcalculator.OhmsLaw_Calculator;
 
@@ -30,6 +34,11 @@ public class fuelMileage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fuel_mileage);
+
+        MobileAds.initialize(fuelMileage.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView)this.findViewById(R.id.adViewfuelmilage);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         editTextGasmileageStart=(EditText)findViewById(R.id.editTextmileage);
         getEditTextGasmileageend=(EditText)findViewById(R.id.editTextmileageend);

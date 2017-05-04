@@ -11,8 +11,12 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.android.otherscalculators.MainActivity;
 import com.nineinfosys.android.otherscalculators.R;
+import com.nineinfosys.android.otherscalculators.gradepointer.averagePointer;
 import com.nineinfosys.android.otherscalculators.squarefootage.BodySurfaceArea;
 
 import java.text.SimpleDateFormat;
@@ -39,6 +43,11 @@ public class timeZone  extends AppCompatActivity{
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.timezone);
+
+        MobileAds.initialize(timeZone.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView)this.findViewById(R.id.adViewtimezone);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         spinnerAvailableID = (Spinner) findViewById(R.id.availableID);
 

@@ -14,8 +14,12 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.android.otherscalculators.MainActivity;
 import com.nineinfosys.android.otherscalculators.R;
+import com.nineinfosys.android.otherscalculators.lovecalculator.timeZone;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -43,6 +47,10 @@ public class GFR extends AppCompatActivity {
 
         setContentView(R.layout.gfr);
 
+        MobileAds.initialize(GFR.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView)this.findViewById(R.id.adViewgfr);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         creatinineTextview=(TextView)findViewById(R.id.textViewCreatinine);
         ageTextview=(TextView)findViewById(R.id.textViewAge);
         creatinineEditText=(EditText)findViewById(R.id.editTextCreatine);

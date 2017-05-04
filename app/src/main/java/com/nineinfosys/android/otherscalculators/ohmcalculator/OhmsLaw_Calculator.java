@@ -15,8 +15,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.android.otherscalculators.MainActivity;
 import com.nineinfosys.android.otherscalculators.R;
+import com.nineinfosys.android.otherscalculators.gradepointer.averagePointer;
 import com.nineinfosys.android.otherscalculators.lovecalculator.LoveCalculator;
 
 public class OhmsLaw_Calculator extends AppCompatActivity {
@@ -29,7 +33,10 @@ public class OhmsLaw_Calculator extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ohms_law__calculator);
-
+        MobileAds.initialize(OhmsLaw_Calculator.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView)this.findViewById(R.id.adViewohmslaw);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         editTextVoltage=(EditText) findViewById(R.id.editTextvoltage);
         editTextcurrent=(EditText)findViewById(R.id.editTextcurrent);

@@ -15,9 +15,13 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.android.otherscalculators.MainActivity;
 import com.nineinfosys.android.otherscalculators.R;
 import com.nineinfosys.android.otherscalculators.horsepower.horsePowerCalculator;
+import com.nineinfosys.android.otherscalculators.lovecalculator.timeZone;
 import com.nineinfosys.android.otherscalculators.ohmcalculator.OhmsLaw_Calculator;
 
 import java.text.DecimalFormat;
@@ -36,7 +40,10 @@ public class tilescalci extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tilescalci);
-
+        MobileAds.initialize(tilescalci.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView)this.findViewById(R.id.adViewtiles);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         editTextLength=(EditText)findViewById(R.id.editTextLength);
         editTextwidth=(EditText)findViewById(R.id.editTextWidth);
         TextviewResult=(TextView)findViewById(R.id.textViewResult);

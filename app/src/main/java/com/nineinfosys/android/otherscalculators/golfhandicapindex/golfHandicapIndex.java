@@ -13,8 +13,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.android.otherscalculators.MainActivity;
 import com.nineinfosys.android.otherscalculators.R;
+import com.nineinfosys.android.otherscalculators.fuelmileagecalculator.fuelMileage;
 import com.nineinfosys.android.otherscalculators.horsepower.horsePowerCalculator;
 import com.nineinfosys.android.otherscalculators.ohmcalculator.OhmsLaw_Calculator;
 
@@ -33,6 +37,10 @@ public class golfHandicapIndex extends AppCompatActivity {
         setContentView(R.layout.activity_golf_handicap_index);
 
 
+        MobileAds.initialize(golfHandicapIndex.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView)this.findViewById(R.id.adViewgolfhandi);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         Score=(EditText)findViewById(R.id.score1);
         course_Rating=(EditText)findViewById(R.id.courseRating1);

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.nineinfosys.android.otherscalculators.windchillindex.windchillIndexCalculator"
 
-    android:background="#E0F7FA" >
+    android:background="#E0F7FA">
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -95,18 +96,25 @@
 
             </LinearLayout>
 
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adViewwindchill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ads:adSize="SMART_BANNER"
+                android:layout_marginTop="30dp"
+                ads:adUnitId="@string/banner_ad_unit_id">
 
+            </com.google.android.gms.ads.AdView>
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:weightSum="1"
-                android:layout_marginTop="25dp">
+                android:layout_marginTop="5dp">
 
                 <Button
                     android:text="CalCulate Index"
-                    android:layout_marginTop="30dp"
                     android:layout_width="205dp"
                     android:background="#90A4AE"
                     android:layout_weight="1"
@@ -118,7 +126,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="25dp">
+                android:layout_marginTop="10dp">
 
 
                 <TableLayout

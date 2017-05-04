@@ -7,13 +7,22 @@
     android:orientation="vertical">
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
     <include
         android:id="@+id/post_author_layout"
         layout="@layout/include_post_author"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/app_bar"
+        />
 
     <include
         android:id="@+id/post_text_layout"
@@ -58,5 +67,6 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/comment_form"
         tools:listitem="@layout/item_comment" />
-
+</LinearLayout>
+    </ScrollView>
 </LinearLayout>

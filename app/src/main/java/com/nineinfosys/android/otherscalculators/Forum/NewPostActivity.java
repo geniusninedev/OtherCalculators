@@ -1,19 +1,22 @@
 package com.nineinfosys.android.otherscalculators.Forum;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.nineinfosys.android.otherscalculators.Login.User;
+import com.nineinfosys.android.otherscalculators.MainActivity;
 import com.nineinfosys.android.otherscalculators.R;
 import com.nineinfosys.android.otherscalculators.models.Post;
 
@@ -39,11 +42,7 @@ public class NewPostActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_post);
-/*
-        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Add New Post");*/
-        // [START initialize_database_ref]
+
         mDatabase = FirebaseDatabase.getInstance().getReference();
         // [END initialize_database_ref]
 
@@ -109,6 +108,7 @@ public class NewPostActivity extends BaseActivity {
 
                         // Finish this Activity, back to the stream
                         setEditingEnabled(true);
+                        startActivity(new Intent(NewPostActivity.this,ForumActivity.class));
                         finish();
                         // [END_EXCLUDE]
                     }
@@ -149,4 +149,29 @@ public class NewPostActivity extends BaseActivity {
         mDatabase.child(getString(R.string.app_id)).child("Forum").updateChildren(childUpdates);
     }
     // [END write_fan_out]
+
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        //noinspection SimplifiableIfStatement
+        if (id == android.R.id.home) {
+            Intent intent=new Intent(NewPostActivity.this,ForumActivity.class);
+            finish();
+            startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent=new Intent(NewPostActivity.this,ForumActivity.class);
+        finish();
+        startActivity(intent);
+    }
 }

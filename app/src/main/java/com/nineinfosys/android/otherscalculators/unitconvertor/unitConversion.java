@@ -18,6 +18,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.android.otherscalculators.MainActivity;
 import com.nineinfosys.android.otherscalculators.R;
 import com.nineinfosys.android.otherscalculators.tilescalculator.tilescalci;
@@ -86,6 +89,10 @@ public class unitConversion  extends AppCompatActivity implements View.OnClickLi
 
         setContentView(R.layout.unitconverter);
 
+        MobileAds.initialize(unitConversion.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView)this.findViewById(R.id.adViewunitcon);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         SpinnerUnit = (Spinner)findViewById(R.id.SpinnerUnit);
         SpinnerUnit.setOnItemSelectedListener(this);

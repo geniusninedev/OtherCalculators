@@ -13,8 +13,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.android.otherscalculators.MainActivity;
 import com.nineinfosys.android.otherscalculators.R;
+import com.nineinfosys.android.otherscalculators.fuelcostcalculator.FuelCostCalculator;
 import com.nineinfosys.android.otherscalculators.horsepower.horsePowerCalculator;
 import com.nineinfosys.android.otherscalculators.ohmcalculator.OhmsLaw_Calculator;
 
@@ -34,6 +38,10 @@ public class averagePointer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_average_pointer);
 
+        MobileAds.initialize(averagePointer.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView)this.findViewById(R.id.adViewaverage);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         Credit=(EditText)findViewById(R.id.credit);
         Score=(EditText)findViewById(R.id.score);

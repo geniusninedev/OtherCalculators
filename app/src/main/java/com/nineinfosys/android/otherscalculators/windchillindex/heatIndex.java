@@ -15,9 +15,13 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.android.otherscalculators.MainActivity;
 import com.nineinfosys.android.otherscalculators.R;
 import com.nineinfosys.android.otherscalculators.lovecalculator.timeZone;
+import com.nineinfosys.android.otherscalculators.tilescalculator.tilescalci;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -40,6 +44,11 @@ public class heatIndex extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.heatindex);
+
+        MobileAds.initialize(heatIndex.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView)this.findViewById(R.id.adViewheat);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         temperature = (Spinner) findViewById(R.id.spinnerTemperature);
         //  temperatureTextView=(TextView)findViewById(R.id.textViewTemperature);
        // percentageTextView=(TextView)findViewById(R.id.textViewPercentage);

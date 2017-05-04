@@ -16,11 +16,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/otherr"
+        android:icon="@mipmap/ic_launcher_other"
         android:label="Other Calculators"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:name="android.support.multidex.MultiDexApplication">
+        android:name=".Login.CustomApplication">
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
@@ -259,16 +259,30 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
-            ></activity>
+            </activity>
 
         <activity android:name=".Forum.NewPostActivity"
-            android:label="Add New Post"/>
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="Add New Post">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Forum.ForumActivity" />
+            ></activity>
         <activity android:name=".Forum.PostDetailActivity"
-            android:label="Comment"/>
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="Comment">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Forum.ForumActivity" />
+            ></activity>
 
         <activity android:name=".Forum.ForumActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-            android:label="Forum"></activity>
+            android:label="Forum">
+            <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+            ></activity>
     </application>
 
 </manifest>

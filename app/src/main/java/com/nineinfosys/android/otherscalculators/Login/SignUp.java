@@ -8,25 +8,27 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.firebase.client.Firebase;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.nineinfosys.android.otherscalculators.R;
 
 public class SignUp extends AppCompatActivity {
 
-    private static final String TAG = "AndroidBash";
+    private static final String TAG = "Login";
     //Add YOUR Firebase Reference URL instead of the following URL
-    private Firebase mRef = new Firebase("https://forum-6136c.firebaseio.com/");
+    private DatabaseReference mRef;
     private User user;
     private EditText name;
     private EditText phoneNumber;
@@ -51,8 +53,13 @@ public class SignUp extends AppCompatActivity {
         password = (EditText) findViewById(R.id.edit_text_new_password);
 
         mAuth = FirebaseAuth.getInstance();
+        mRef = FirebaseDatabase.getInstance().getReference().child("Users");
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setTitle("Sign Up");
 
         // [START auth_state_listener]
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -98,6 +105,7 @@ public class SignUp extends AppCompatActivity {
         UserLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
                 startActivity(new Intent(SignUp.this,Login.class));
             }
         });
@@ -163,36 +171,41 @@ public class SignUp extends AppCompatActivity {
 
                         Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
                         hideProgressDialog();
-
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
                             Toast.makeText(SignUp.this, "Already Registered!", Toast.LENGTH_SHORT).show();
                         } else {
-                            onAuthenticationSucess(task.getResult().getUser());
+                            onAuthenticationSucess();
                         }
-
 
                     }
                 });
 
     }
 
-    private void onAuthenticationSucess(FirebaseUser mUser) {
+    private void onAuthenticationSucess() {
         // Write new user
-        saveNewUser(mUser.getUid(), user.getName(), user.getPhoneNumber(), user.getEmail(), user.getPassword(),user.getGender());
+        saveNewUser();
         sendEmailVerification();
         signOut();
+        finish();
         startActivity(new Intent(SignUp.this, Login.class));
 
 
     }
 
-    private void saveNewUser(String userId, String name, String phone, String email, String password,String gender) {
-        User user = new User(userId,name,phone,email,password,gender);
+  private void saveNewUser() {
 
-        mRef.child(getString(R.string.app_id)).child("Users").child(getString(R.string.email_data)).child(userId).setValue(user);
+        String user_id = mAuth.getCurrentUser().getUid();
+        DatabaseReference current_user_db = mRef.child(user_id);
+        current_user_db.child("name").setValue(user.getName());
+        current_user_db.child("id").setValue(user.getId());
+        current_user_db.child("Email").setValue(user.getEmail());
+        current_user_db.child("Password").setValue(user.getPassword());
+        current_user_db.child("Phone Number").setValue(user.getPhoneNumber());
+
     }
 
 
@@ -275,5 +288,25 @@ public class SignUp extends AppCompatActivity {
             mProgressDialog.dismiss();
         }
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        //noinspection SimplifiableIfStatement
+        if (id == android.R.id.home) {
 
+            finish();
+            startActivity(new Intent(SignUp.this, Login.class));
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+        startActivity(new Intent(SignUp.this, Login.class));
+    }
 }

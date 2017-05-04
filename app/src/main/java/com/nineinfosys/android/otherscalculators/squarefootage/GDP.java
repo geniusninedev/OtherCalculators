@@ -13,8 +13,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.nineinfosys.android.otherscalculators.MainActivity;
 import com.nineinfosys.android.otherscalculators.R;
+import com.nineinfosys.android.otherscalculators.lovecalculator.timeZone;
 
 /**
  * Created by Dev on 03-04-2017.
@@ -32,6 +36,10 @@ public class GDP extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gdp);
+        MobileAds.initialize(GDP.this, getString(R.string.ads_app_id));
+        AdView mAdView = (AdView)this.findViewById(R.id.adViewgdp);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
         consumptionTextView=(TextView)findViewById(R.id.textViewPersonalConsumption);
         governmentconsumptionTextView=(TextView)findViewById(R.id.editTextGovernmentConsumption);
         grossinvestmentTextView=(TextView)findViewById(R.id.textViewGrossInvestment);
